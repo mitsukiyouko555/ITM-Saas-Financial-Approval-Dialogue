@@ -1,0 +1,10 @@
+@font-face {
+    font-family: mplus;
+    src: url(public/MPLUSRounded1c-Regular.ttf);
+}
+body{
+    font-family: mplus;
+}
+.wip{
+    color: red;
+}
