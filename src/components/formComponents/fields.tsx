@@ -1,5 +1,4 @@
-import * as React from "react";
-import handleITMSaas from "./handleFunctions/handleITMSaas";
+import handleITMSaas from "../handleFunctions/handleITMSaas";
 
 function TheFields(theId:any, theClass:any, fieldName:any, thedefaultValue?:any){
 
@@ -11,13 +10,15 @@ function TheFields(theId:any, theClass:any, fieldName:any, thedefaultValue?:any)
         // console.log(fieldName, ":", e.target.value)
         
         theId == "itmUsers" ? handleITMSaas(e, fieldName, theId): console.log("not ITM Saas Users")
+
+
         // PERFECT!!! this works! Now i just gotta put it in a case statement so that each thing will call its own function from another page... something like case theId == "itmUsers" : setITMSaasUsersAndVC()
         //base visual capture should not be updatable. Only Additional VC should be. Total = base + Additional.
 
     }
 
     return(
-        <div>
+        <div className="theFields">
             {fieldName}: <input onBlur={handleOnBlur} id={theId} className={theClass} defaultValue={thedefaultValue}/>
         </div>
     )

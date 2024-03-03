@@ -6,15 +6,16 @@
 function Dropdowns(...params:any[]){
     // NOTE: the ... makes it so that you can put any number of params!! doesnt have to be the same for each component which is super awesome!!
 
+    function handleDropdowns(e:any){
+        console.log(e.target.value) //this works well. use case statement to handle math for vc?
+    }
 
     return(
         <div className="dropdowns">
-
             <label>{params[0][3]}: </label>
-            <select name={params[0][3]}>
-                {params.map((i) => <option key={i[0]} className={i[1]} id={i[0]}> {i[2]} </option>)}
+            <select name={params[0][3]} onChange={handleDropdowns}>
+                {params.map((i) => <option key={i[0]} className={i[1]} id={i[0]} value={i[0]}> {i[2]} </option>)}
             </select>
-
         </div>
     )
 

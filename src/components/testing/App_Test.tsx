@@ -1,5 +1,5 @@
 //putting this here in case i override the main app.tsx file and forgot what i did to make it work
-import Test from './components/testing/test.tsx'
+import Test from './test.tsx'
 function App() {
   // const [count, setCount] = useState(0)
 
