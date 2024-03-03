@@ -1,4 +1,4 @@
-import {afun} from "../components/afun.tsx"
+import {afun} from "./afun.tsx"
 
 // note if you get an error like the one below, put .. before the path depending on how many folders it's in. If its one folder down from src, type .. before the /path
 //Error in question: Cannot find module './components/afun.tsx' or its corresponding type declarations.
