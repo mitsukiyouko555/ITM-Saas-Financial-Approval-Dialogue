@@ -1,6 +1,6 @@
 @font-face {
     font-family: mplus;
-    src: url(public/MPLUSRounded1c-Regular.ttf);
+    src: url(/MPLUSRounded1c-Regular.ttf);
 }
 body{
     font-family: mplus;

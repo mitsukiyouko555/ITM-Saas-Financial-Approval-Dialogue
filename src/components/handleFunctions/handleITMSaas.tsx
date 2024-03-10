@@ -1,11 +1,10 @@
-// import handleVC from "./handleVC"
+function handleITMSaas(e:any){
+    console.log(e.target.id, e.target.value)        
+    // itmSaasUserCount = e.target.value
+    // console.log(itmSaasUserCount)
 
-function handleITMSaas(e:any, fieldName:any, theId?:any){
-        
-    console.log(fieldName,":", e.target.value)
     
-    // handleVC(e, theId)
-
 
 }
+
 export default handleITMSaas

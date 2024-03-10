@@ -7,14 +7,12 @@ function EndpointForms() {
   return (
     <>
         <p className="wip">Endpoint DLP Users:</p>
-        {/* <p className="wip">Additional Endpoint DLP Users:</p>
-        <p className="wip">Total Endpoint DLP Users:</p>
-         These should go in the enterprise dlp and dlp transform forms.*/}
-        {Dropdowns([["endpointDefault"], ["endpointDropdown, endpointRetention"], ["Select a Retention"], ["Endpoint DLP Retention"]],
-        [["endpoint30days"], ["endpointDropdown, endpointRetention"], ["30 Days"], ["Endpoint DLP Retention"]],
-        [["endpoint90days"], ["endpointDropdown, endpointRetention"], ["90 days"] , ["Endpoint DLP Retention"]],
-        [["endpoint120days"], ["endpointDropdown, endpointRetention"], ["120 days"] , ["Endpoint DLP Retention"]],
-        [["endpoint366days"], ["endpointDropdown, endpointRetention"], ["366 days"] , ["Endpoint DLP Retention"]],)}
+
+        {Dropdowns([["endpointDefault"], ["endpointDropdown, endpointRetention"], ["Select a Retention"], ["Endpoint DLP Retention"], [null]],
+        [["endpoint30days"], ["endpointDropdown, endpointRetention"], ["30 Days"], ["Endpoint DLP Retention"], [30]],
+        [["endpoint90days"], ["endpointDropdown, endpointRetention"], ["90 Days"] , ["Endpoint DLP Retention"], [90]],
+        [["endpoint120days"], ["endpointDropdown, endpointRetention"], ["120 Days"] , ["Endpoint DLP Retention"], [120]],
+        [["endpoint366days"], ["endpointDropdown, endpointRetention"], ["366 Days"] , ["Endpoint DLP Retention"], [366]],)}
 
     </>
   )

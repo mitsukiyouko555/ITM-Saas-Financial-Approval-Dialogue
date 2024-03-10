@@ -1,4 +1,4 @@
-import Forms from "./components/forms/itmforms"
+import Forms from "./components/forms/forms"
 
 function App() {
 
