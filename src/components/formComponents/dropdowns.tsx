@@ -2,32 +2,21 @@
 //parameter 2/[1] is the class(es)
 //parameter3/[2] is the optionName
 //Parameter 4/[3] is the FIELD Name (goes in the label ONLY)
-import { HandleITMRetention } from "./globalParam"
+import { HandleITMVisualCapture } from "./globalParam"
 
 function Dropdowns(...params:any[]){
     // NOTE: the ... makes it so that you can put any number of params!! doesnt have to be the same for each component which is super awesome!!
 
     function handleDropdowns(e:any){
 
-        console.log(e.target.value)
+        console.log(params[3], e.target.value)
         if (e.target.className.includes("itmRetention")){
             // console.log("itmret")
-            HandleITMRetention(e)
+            HandleITMVisualCapture(e)
         } 
         else{
             console.log("no itm ret.")
         }
-
-
-         //this works well. use case statement to handle math for vc?
-        //pass e to other functions
-        
-        // if (e.target.classList.contains("itmRetention")){
-        //     console.log("class does DOES contain itm retention")
-        // }
-        // else{
-        //     console.log("class does not contain itm retention")
-        // }
 
     }
 
