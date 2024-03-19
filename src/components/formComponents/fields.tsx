@@ -3,7 +3,7 @@ function TheFields(theId:any, theClass:any, fieldName:any, handleOnBlurFunction?
 
     return(
         <div className="theFields">
-            {fieldName}: <input onBlur={handleOnBlurFunction} id={theId} className={theClass} defaultValue={thedefaultValue} />
+            {fieldName}: <input onBlur={handleOnBlurFunction} id={theId} className={theClass} defaultValue={thedefaultValue}/>
         </div>
     )
 }

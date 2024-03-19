@@ -14,7 +14,7 @@ function checkboxes(idValue:any, fieldName:any, groupName:any, ){
 
     return(
         <div>
-            <input type="checkbox"></input>
+            <input type="checkbox" id={idValue} name={groupName}/>{fieldName}
         </div>
     )
 
