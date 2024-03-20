@@ -3,7 +3,6 @@
 //parameter3/[2] is the optionName
 //Parameter 4/[3] is the FIELD Name (goes in the label ONLY)
 // import HandleITMVisualCapture from "./globalParam"
-import HandleITMSaas from "../handleFunctions/handleITMSaas"
 function Dropdowns(...params:any[]){
     // NOTE: the ... makes it so that you can put any number of params!! doesnt have to be the same for each component which is super awesome!!
 
@@ -11,8 +10,7 @@ function Dropdowns(...params:any[]){
 
         console.log(e.target.value)
         if (e.target.className.includes("itmRetention")){
-            // console.log("itmret")
-            HandleITMSaas(e)
+            console.log("itmret")
         } 
         else{
             console.log("no itm ret.")
