@@ -1,4 +1,4 @@
-function checkboxes(idValue:any, fieldName:any, groupName:any, ){
+function checkboxes(idValue:any, fieldName:any, ){
     //needs the following itms:
     //name (treat this similar to class as it needs to have the same name to be in a group.)
     //  ITM With NO Base Visual Capture, ITM with Base Visual Capture, Endpoint checkboxes should have the same name; ent dlp and dlp transform should have the same name
