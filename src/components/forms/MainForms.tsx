@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react"
-import Test5 from "./test5"
+import Forms from "./forms"
 export default function MainForms(){
 
-//for the box, 0 = unchecked, 1 = checked.. that will be set via useState
-// maybe the function will be like "if current state is 0, change it to 1. else change it to 0"
     const [formDeets, setformDeets] = useState({
         itmNoVCBox: 0,
         itmWithVCBox:0,
@@ -29,21 +27,16 @@ export default function MainForms(){
         endpointDLPRetention:0,
         metadataFeedQuantity:0,
         metadataFeedCapacity:0,
+        term_date_radio:"",
         term:"",
-        endDate:""
+        endDate:"",
+        misc:""
     })
 
-    const handleBlur = (e:any) =>{
-        const {name, value} = e.target;
+    function handleBlur(e:any){
         setformDeets((prev) =>{
-            return{ ...prev, [name]:value}
+            return{ ...prev, [e.target.name]:e.target.value}
         })
-        if (e.target.name == "itmSaasUsers"){
-            console.log("ITM Saas User count is being updated! Any functions that need to run for itm users specifically goes here!")
-        }
-        else{
-            console.log("Just passing through for now...")
-        }
     }
 
     useEffect(()=>{
@@ -53,11 +46,7 @@ export default function MainForms(){
 
     return(
         <>
-            <input name="itmNoVCBox" type="checkbox" onClick={handleBlur} value={formDeets.itmNoVCBox ==0?1:0}/> itmNoVCBox
-            {/*Whoo hoo!! these both work!!*/}
-            <Test5 blurFunction={handleBlur}/>
-            {/* <button onClick={handleBlur}>Test</button> */}
-            {/* ITM Saas Users:<input name="itmSaasUsers" onBlur={handleBlur}/> */}
+            <Forms handleBlur={handleBlur} itmNoVCBox={formDeets.itmNoVCBox} itmWithVCBox={formDeets.itmWithVCBox} endpointDLPBox={formDeets.endpointDLPBox} enterpriseDLPBox={formDeets.enterpriseDLPBox} dlpTransformBox={formDeets.dlpTransformBox} term_date_radio={formDeets.term_date_radio}/>
         </>
     )
 }

@@ -1,36 +1,21 @@
-import ItmForms from "./itmforms"
-import EndpointForms from "./endpointforms"
-import TheFields from "../formComponents/fields"
-import Dropdowns from "../formComponents/dropdowns"
-import CheckboxForm from "./checkboxform"
-
-function Forms() {
-
-
-
-  function handleSubmission(){
-    // Remember to Prevent Default to make it not refresh the page.
-    //collect and render input like so: https://www.youtube.com/watch?v=NxVCq4p0Kb0
-  }
-
-  return (
-    <form>
-        <CheckboxForm/>
-        {Dropdowns([["new"], ["dealDropdown"], ["New"], ["Deal Type"]], 
-        [["renewal"], ["dealDropdown"], ["Renewal"], ["Deal Type"]], 
-        [["addon"], ["dealDropdown"], ["Add-On"], ["Deal Type"]])}
-        
-        <ItmForms/>
-        <EndpointForms/>
-
-        <p className="wip">Metadata Feed Capacity per 30 Days in GBs:</p>
-        <p className="wip">Term or License Through Date:</p>
-        <p className="wip">Misc Comments:</p>
-
-        <button type="submit" onClick={handleSubmission}>Approve</button>
-        <button type="reset"> Clear Form</button>
-    </form>
-  )
+import HeaderForms from "../formComponents/General/headerforms"
+import ItmForms from "../formComponents/ITM/itmforms"
+import EndpointForms from "../formComponents/Endpoint DLP/endpointforms"
+import FooterForms from "../formComponents/General/footerforms"
+import MetadataFeedForm from "../formComponents/General/metadataFeed"
+export default function Forms(props:any){
+    return(
+        <>
+            <form>
+                <HeaderForms handleBlur={props.handleBlur} itmNoVCBox={props.itmNoVCBox} itmWithVCBox={props.itmWithVCBox} endpointDLPBox={props.endpointDLPBox} enterpriseDLPBox={props.enterpriseDLPBox} dlpTransformBox={props.dlpTransformBox}/>
+                
+                <ItmForms handleBlur={props.handleBlur}/>
+                <EndpointForms handleBlur={props.handleBlur}/>
+                <MetadataFeedForm handleBlur={props.handleBlur} />
+                <FooterForms handleBlur={props.handleBlur} term_date_radio={props.term_date_radio} />
+                <button type="submit"> Approve </button>
+                <button type="reset"> Reset Form </button>
+            </form>
+        </>
+    )
 }
-
-export default Forms
