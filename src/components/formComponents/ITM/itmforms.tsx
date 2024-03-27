@@ -1,3 +1,4 @@
+import EnterpriseDLPorDLPTransformForm from "../General/enterpriseORdlpTransform";
 import TheFields from "../fields";
 import AdditionalITMSaasUsers from "./additionalITMUsers";
 import AdditionalITMSaasVisualCapture from "./additionalVisualCapture";
@@ -6,6 +7,7 @@ export default function ItmForms(props:any) {
 
   return (
     <>
+      <EnterpriseDLPorDLPTransformForm handleBlur={props.handleBlur}/>
       <TheFields theId="itmSaasUsers" theClass="ITMForm" fieldName="ITM Saas Users" handleBlur={props.handleBlur} type="text"/>
       <AdditionalITMSaasUsers handleBlur={props.handleBlur}/>
       <TheFields

@@ -12,7 +12,7 @@ export default function FooterForms(props:any){
             type="radio" 
             options={
             [[["term"],["term_date"],["Term"],["term"]],
-            [["date"],["term_date"],["End Date"],["date"]]]} 
+            [["endDate"],["term_date"],["End Date"],["endDate"]]]} 
             />
 
             <DateOrTerm handleBlur={props.handleBlur} term_date_radio={props.term_date_radio} />
