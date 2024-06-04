@@ -16,8 +16,6 @@ They had concerns about security as it was originally hosted on Github pages as 
 Infosec wanted me to remove it from my Github (and I did of course). The engineering Manager sent me some resources to help me figure out how to host the site internally and on https.
 
 I learned a lot from this experience as I created SSH key pairs, learned how to create and terminate Amazon EC2 Instances, used docker to host a React Site, and set up vite and nginx configs to support HTTPS (with help from a colleague on another team), learned to bind certs to docker, and more. I also did a full E2E testing on it before the release.
-​
-Unfortunately, unlike my other experiences here (please scroll down for more), I won't be able to post an image or visuals for this until I get approval from my company's legal team.
 
 Languages And Other Components Used: HTML, CSS, Javascript, React, Vite Configs, Nginx Configs, Docker, EC2 Instance (CentOS), LDAP, SSH, SSL/HTTPS Certs, and SCP
 
