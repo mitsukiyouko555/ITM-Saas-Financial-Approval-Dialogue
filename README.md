@@ -17,7 +17,7 @@ Infosec wanted me to remove it from my Github (and I did of course). The enginee
 
 I learned a lot from this experience as I created SSH key pairs, learned how to create and terminate Amazon EC2 Instances, used docker to host a React Site, and set up vite and nginx configs to support HTTPS (with help from a colleague on another team), learned to bind certs to docker, and more. I also did a full E2E testing on it before the release.
 
-Languages And Other Components Used: HTML, CSS, Javascript, React, Vite Configs, Nginx Configs, Docker, EC2 Instance (CentOS), LDAP, SSH, SSL/HTTPS Certs, and SCP
+Languages And Other Components Used: HTML, CSS, Javascript, React, Vite Configs, Nginx Configs, Docker, EC2 Instance (CentOS), LDAP, SSH, SSL/HTTPS Certs, SCP, and Bash
 
 HTML was used:
 - for the content of the site as well as for the images
@@ -56,3 +56,6 @@ SSL/HTTPS Certificates were used:
 
 SCP was used:
 - for moving built docker images from my main laptop to the EC2 Machine (CentOS had an old version of docker that couldn't build multistage docker files so I had to build it on my windows laptop then SCP it over.)
+
+Bash was used:
+- for writing scripts to streamline my process for updating the code for this web app and having that reflect on the hosted version. The script streamlines the docker build and save to tar functions on my main windows laptop. Once the Tar file was built, I'd SCP it over to my CentOS EC2 Machine then run the second script to stop the current container for this project (located by name), remove the container, then load the tar file, and run the docker image (with creds on volume bind) to spin the site up again with the updated code, increasing efficiency by 50% (what used to take 6-7 commands now only takes 3 commands to complete.)
