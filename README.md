@@ -25,10 +25,7 @@ HTML was used:
 CSS was used:
 - for styling the web app with a different font than the default as well as other design configs
  
-Typescript was used:
-- for creating 
-
-React was used:
+React and Typescript was used:
 - for creating the web app
 - I utilized props, UseEffect, UseState and more to make the calculations on the form work properly
 
