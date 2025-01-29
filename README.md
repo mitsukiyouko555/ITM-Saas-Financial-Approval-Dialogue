@@ -25,7 +25,7 @@ HTML was used:
 CSS was used:
 - for styling the web app with a different font than the default as well as other design configs
  
-React and Typescript was used:
+React and Typescript were used:
 - for creating the web app
 - I utilized props, UseEffect, UseState and more to make the calculations on the form work properly
 
@@ -43,7 +43,7 @@ Docker was used:
 Amazon EC2 (CentOS) was used:
 - for creating an instance of which I could use to host my React App
 
-SSH (and LDAP) was used:
+SSH (and LDAP) were used:
 - for logging into the EC2 Instance I created
 - I also generated SSH Keys so that I could put them in LDAP (using an internal service) so that it syncs with active directory
 
